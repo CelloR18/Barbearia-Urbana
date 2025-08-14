@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin - Barbearia Urbana</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.css">
+</head>
+<body class="admin-page">
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-cut"></i>
+                    Barbearia Urbana - Admin
+                </div>
+                <nav id="navbar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="agendamento.html">Agendamentos</a></li>
+                        <li><a href="admin.html" class="active">Painel Admin</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="admin-panel">
+        <div class="container">
+            <div class="section-title">
+                <h2>Painel <span>Administrativo</span></h2>
+                <p>Gerencie os agendamentos e configurações da barbearia</p>
+            </div>
+            
+            <div class="admin-content">
+                <div class="admin-calendar">
+                    <div id="admin-calendar"></div>
+                </div>
+                
+                <div class="agendamentos-list">
+                    <h3><i class="fas fa-list"></i> Agendamentos do Dia</h3>
+                    <div class="filters">
+                        <input type="date" id="filter-date" value="">
+                        <button id="filter-btn" class="btn small-btn">Filtrar</button>
+                        <button id="today-btn" class="btn small-btn">Hoje</button>
+                    </div>
+                    <div class="agendamentos-container" id="agendamentos-container">
+                        <p class="no-agendamentos">Carregando agendamentos...</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="admin-stats">
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-day"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>Agendamentos Hoje</h4>
+                        <p id="stats-hoje">0</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-calendar-week"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>Esta Semana</h4>
+                        <p id="stats-semana">0</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">
+                        <i class="fas fa-money-bill-wave"></i>
+                    </div>
+                    <div class="stat-info">
+                        <h4>Faturamento Estimado</h4>
+                        <p id="stats-faturamento">R$ 0,00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.js"></script>
+    <script src="admin.js"></script>
+</body>
+</html>

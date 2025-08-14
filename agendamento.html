@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento - Barbearia Urbana</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.css">
+</head>
+<body>
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-cut"></i>
+                    Barbearia Urbana
+                </div>
+                <nav id="navbar">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="agendamento.html" class="active">Agendar</a></li>
+                        <li><a href="admin.html">Área Admin</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-agendamento">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Agende Seu Horário</h1>
+                <p>Escolha o melhor horário para seu corte e barba com nossos profissionais</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="agendamento">
+        <div class="container">
+            <div class="section-title">
+                <h2>Horários <span>Disponíveis</span></h2>
+            </div>
+            
+            <div class="agendamento-content">
+                <div class="calendar-container">
+                    <div id="calendar"></div>
+                </div>
+                
+                <div class="form-container">
+                    <form id="agendamento-form">
+                        <div class="form-group">
+                            <label for="cliente-nome">Nome Completo*</label>
+                            <input type="text" id="cliente-nome" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cliente-telefone">Telefone*</label>
+                            <input type="tel" id="cliente-telefone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="cliente-email">E-mail</label>
+                            <input type="email" id="cliente-email">
+                        </div>
+                        <div class="form-group">
+                            <label for="servico">Serviço*</label>
+                            <select id="servico" required>
+                                <option value="">Selecione um serviço</option>
+                                <option value="Corte Clássico">Corte Clássico - R$60,00 (45 min)</option>
+                                <option value="Barba Completa">Barba Completa - R$45,00 (30 min)</option>
+                                <option value="Corte + Barba">Corte + Barba - R$90,00 (75 min)</option>
+                                <option value="Hidratação Premium">Hidratação Premium - R$40,00 (20 min)</option>
+                                <option value="Pigmentação de Barba">Pigmentação de Barba - R$50,00 (40 min)</option>
+                                <option value="Design de Sobrancelhas">Design de Sobrancelhas - R$30,00 (15 min)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="horario-selecionado">Horário Selecionado*</label>
+                            <input type="text" id="horario-selecionado" readonly required>
+                        </div>
+                        <div class="form-group">
+                            <label for="observacoes">Observações</label>
+                            <textarea id="observacoes" rows="3"></textarea>
+                        </div>
+                        <button type="submit" class="btn submit-btn">Confirmar Agendamento <i class="fas fa-calendar-check"></i></button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>Barbearia Urbana</h4>
+                    <p>Excelência em serviços prestados desde 2018.</p>
+                    <p><i class="fas fa-star"></i> Indicação é a maior prova de confiança</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Horário de Funcionamento</h4>
+                    <p>Terça a Sexta: 10:00 - 19:00</p>
+                    <p>Sábado: 10:00 - 19:00</p>
+                    <p>Domingo e Segunda: Fechado</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Rua Maria Mendes Vecchi, 57 - Centro, Mesquita/RJ</p>
+                    <p><i class="fas fa-phone-alt"></i> (21) 97339-5790</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Barbearia Urbana. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/5.11.3/main.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
